@@ -6,5 +6,8 @@ Remove-AzureADMSAdministrativeUnit -Id $adminUnitObj.id
 
 #Microsoft Graph API
 
-#use Delete administrativeUnit API 
+#first you might wanna list (get) the administrativeUnits {id}
+GET https://graph.microsoft.com/v1.0/directory/administrativeUnits 
+
+#then use Delete administrativeUnit API with the {id} of the admin unit to delete
 DELETE https://graph.microsoft.com/v1.0/directory/administrativeUnits/{admin-unit-id}
