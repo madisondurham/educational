@@ -1,0 +1,9 @@
+#First we need to allow running scripts on the system. Unrestricted is usually not best practice to leave enabled.
+Set-ExecutionPolicy Unrestricted
+
+#I found that I needed to do this to install azuread 
+import-Module powershellget
+
+#the actual azuread commands 
+install-module azuread 
+import-module azuread
