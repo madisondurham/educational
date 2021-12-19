@@ -1,0 +1,19 @@
+#PowerShell
+
+#Password object creation 
+$PasswordProfile = New-object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+
+#Assign Password
+$PasswordProfile.Password = "S4turd4y18D3C3MB4R21!"
+
+#Creates a new user
+New-AzureADUser -AccountEnabled $True -DisplayName "Rocket Raccoon" -PasswordProfile $PasswordProfile -MailNickName "RocketR" -UserPrincipalName "RocketR@rocketraccoon.org"
+
+
+#Azure CLI
+
+#az ad user create --display-name "Rocket Raccoon" \
+#                  --password "S4turd4y18D3C3MB4R21!"
+#                  --user-principal-name "RocketR@rocketraccoon.org" \
+#                  --force-change-password-next-login true \
+#                  --mail-nickname "RocketR"
