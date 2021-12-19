@@ -1,0 +1,19 @@
+#powershell
+
+#use the New-AzureADMSAdministrativeUnit command
+New-AzureADMSAdministrativeUnit -description "North VA Region" -DisplayName "NoVa"
+
+#Microsoft Graph API
+
+#use the Create administrativeUnit API to create a new administrative unit.
+
+#Request
+
+POST https://graph.microsoft.com/v1.0/directory/administrativeUnits
+
+#Body
+
+{
+    "displayName": "North VA Region"
+    "description": "North Virginia Region administration"
+}

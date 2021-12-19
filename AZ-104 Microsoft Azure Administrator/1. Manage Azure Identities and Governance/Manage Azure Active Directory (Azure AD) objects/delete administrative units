@@ -1,0 +1,10 @@
+#powershell
+
+#use Remove-AzureADMSAdministrativeUnit
+$adminUnitObj = Get-AzureADMSAdministrativeUnit -Filter "displayname eq 'NoVa'"
+Remove-AzureADMSAdministrativeUnit -Id $adminUnitObj.id
+
+#Microsoft Graph API
+
+#use Delete administrativeUnit API 
+DELETE https://graph.microsoft.com/v1.0/directory/administrativeUnits/{admin-unit-id}
