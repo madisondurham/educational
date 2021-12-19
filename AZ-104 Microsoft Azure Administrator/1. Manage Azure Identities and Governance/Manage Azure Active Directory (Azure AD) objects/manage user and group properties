@@ -1,0 +1,4 @@
+#Powershell
+
+#first we get the group we want
+Get-AzureADGroup -SearchString "Systems"
